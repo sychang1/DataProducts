@@ -1,0 +1,64 @@
+MPG - 1974 Motor Trend data
+========================================================
+author: S. Y. Chang
+date:  July-19-2016
+autosize: true
+transition: rotate
+
+Summary
+========================================================
+
+Here, we present a Shiny app that analyzes the impact of a set of variables on the miles per gallon (MPG) of various car models. The data set is taken from 1974 Motor Trend magazine. The main functions of this app are the following: 
+
+- Apply various linear regression formulas.
+- Calculate the MPG dependence on the transmission type.
+- Visualize the residual distribution and check for the normality.
+
+For more details, <https://github.com/sychang1/DataProducts>.
+
+This app has been inspired by the Regression Models's final project.
+
+Background
+========================================================
+
+The variables of the data set are as following:
+
+```{r explore}
+library(datasets)
+data(mtcars)
+names(mtcars)
+```
+
+From above, we pick *mpg* as the outcome variable and *hp*, *am*, *wt*, *qsec* as possible predictor variables.
+
+
+App Input
+========================================================
+
+
+![alt text](Image_1.png)
+
+***
+
+On the left sidebar panel:
+
+- Select the linear regression formula.
+
+- Display the residual plot: **yes** or **no**?
+
+- Press **GO** button to apply.
+
+App Output
+========================================================
+
+
+![alt text](Image_2.png)
+
+
+***
+
+On the main panel:
+
+- Summary of the regression fit.
+
+- If checked, also display the residual plot.
